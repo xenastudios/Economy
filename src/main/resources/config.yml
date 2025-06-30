@@ -1,0 +1,67 @@
+#
+# Economy By Xena Studios
+# Version $version
+#
+
+# Plugin Messages
+messages:
+  error:
+    usage: "<red>Usage: <usage></red>"
+    player-only: "<red>Only a player can execute this command!</red>"
+    no-player: "<red>That player doesn't exist!</red>"
+    not-enough: "<red>You do not have enough money!</red>"
+
+# Banknotes
+banknotes:
+  item:
+    title: "<!i><green><b>Banknote</b></green>"
+    lore:
+      - "<!i><dark_gray>Economy Item</dark_gray>"
+      - ""
+      - "<!i><green>Information:</green>"
+      - "<!i><gray>»</gray> <white>Amount:</white> <green><amount></green>"
+      - ""
+      - "<!i><green>Right-Click to Redeem</green>"
+  messages:
+    redeemed: "<green>Redeemed <amount> into your account!</green>"
+    error:
+      invalid: "<red>This banknote is invalid or already redeemed!</red>"
+
+# Plugin Commands
+commands:
+  balance:
+    enabled: true
+    permissions:
+      default: economy.command.balance
+      others: economy.command.balance.others
+    aliases:
+      - bal
+      - money
+    messages:
+      balance: "<white>Balance: <green><balance></green></white>"
+      others-balance: "<white><green><player>'s</green> balance: <green><balance></green></white>"
+  economyadmin:
+    enabled: true
+    permission: economy.command.economyadmin
+    aliases: [ ]
+    messages:
+      config-reloaded: "<green>Economy's config has been reloaded.</green>"
+      set-success: "<green>Set <player>'s balance to <balance></green>"
+      give-success: "<green>Gave <amount> to <player>. New balance: <balance></green>"
+      take-success: "<green>Took <amount> from <player>. New balance: <balance></green>"
+  pay:
+    enabled: true
+    permission: economy.command.pay
+    aliases: [ ]
+    messages:
+      sent: "<green>Sent <amount> to <player>.</green>"
+      received: "<green>You received <amount> from <player>.</green>"
+      error:
+        self: "<red>You cannot pay yourself!</red>"
+        not-enough: "<red>You do not have enough money!</red>"
+  withdraw:
+    enabled: true
+    permission: economy.command.withdraw
+    aliases: [ ]
+    messages:
+      withdrawn: "<green>Withdrawn <amount> as a banknote!</green>"

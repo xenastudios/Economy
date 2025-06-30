@@ -1,6 +1,12 @@
 name: Economy
 version: $version
 main: co.xenastudios.economy.EconomyPlugin
-authors: [Cookie]
+authors: [ Cookie ]
 api-version: '1.21.5'
 folia-supported: true
+dependencies:
+  server:
+    Vault:
+      load: BEFORE
+      required: true
+      join-classpath: true
