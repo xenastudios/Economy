@@ -58,7 +58,6 @@ commands:
       received: "<green>You received <amount> from <player>.</green>"
       error:
         self: "<red>You cannot pay yourself!</red>"
-        not-enough: "<red>You do not have enough money!</red>"
   withdraw:
     enabled: true
     permission: economy.command.withdraw
